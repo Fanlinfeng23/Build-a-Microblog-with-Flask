@@ -46,8 +46,8 @@ from app import routes
 ```
 But it's obviously that there's not file called routes.py.
 
-So we create [routes.py](Code/Chapter1/microblog/app/routes.py)
-If you are not so clear about why, i suggest you to review my [python flask learning]([README.md](https://github.com/Fanlinfeng23/Python-Flask-learning/blob/main/README.md)https://github.com/Fanlinfeng23/Python-Flask-learning/blob/main/README.md)
+So we create [routes.py](https://github.com/Fanlinfeng23/Build-a-Microblog-with-Flask/blob/main/Code/Chapter1/microblog/app/routes.py)
+If you are not so clear about why, i suggest you to review my [python flask learning]((https://github.com/Fanlinfeng23/Python-Flask-learning/blob/main/README.md)https://github.com/Fanlinfeng23/Python-Flask-learning/blob/main/README.md)
 
 Then to complete the app, you need a python script at the top-leval that defines the Flask app instance, so let's create this script called microblog.py, and define it as follows
 ```python
