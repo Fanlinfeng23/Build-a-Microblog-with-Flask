@@ -29,4 +29,37 @@ venv\Scripts\Activate.ps1
 ```shell
 pip install Flask
 ```
+## 4.Flask Application
+Firstly, we need to create a package called app, how can a dir change into a package that can be imported?
 
+The answer is  as followed: If we add a file named __init__.py , and you will get it into a package.
+
+So run the following code:
+```shell
+mkdir app
+```
+Then in app, you need to edit the __init__.py file as [this](Code/Chapter1/microblog/app/__init__.py)
+
+As you could see, the last line in the code is:
+```python
+from app import routes
+```
+But it's obviously that there's not file called routes.py.
+
+So we create [routes.py](Code/Chapter1/microblog/app/routes.py)
+If you are not so clear about why, i suggest you to review my [python flask learning]([README.md](https://github.com/Fanlinfeng23/Python-Flask-learning/blob/main/README.md)https://github.com/Fanlinfeng23/Python-Flask-learning/blob/main/README.md)
+
+Then to complete the app, you need a python script at the top-leval that defines the Flask app instance, so let's create this script called microblog.py, and define it as follows
+```python
+from app import app
+```
+
+## 5.Running it
+Before running it, Flask needs to be told how to import it, so you need to run the following command:
+```shell
+export FLASK_APP=microblog.py
+```
+> if you are using Microsoft Windows, you need to replace export by set
+
+## The sturcture of the app
+[app](Code/Chapter1/microblog)
