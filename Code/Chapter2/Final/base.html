@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <!-- 若有标题的话执行下面的语句 -->
+    <title>{{title}}-Mircroblog</title>
+    
+    <!-- 否则执行下面语句 -->
+    {% else %}
+    <title>Welcome to Microblog</title>
+
+    <!-- 代表else语句的结束点 -->
+    {% endif %}
+</head>
+<body>
+    <div>Microblog: <a href="/index">Home</a></div>
+    <hr>
+    {% block content %}{% endblock %}
+    <!-- 这一部分是来控制插入的，在其他HTML文件中写入这一段可直接相当于在这一段中插入，如见index3.html -->
+</body>
+</html>

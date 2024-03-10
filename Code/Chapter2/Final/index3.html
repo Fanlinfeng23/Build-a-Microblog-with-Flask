@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+<!-- 在上述文件的基础上进行延伸 -->
+
+{% block content %}
+<h1>Hi, {{user.username}}!</h1>
+{% for post in posts %}
+<!-- 开启一个循环，穷举每一个post -->
+<div><p>{{post.author.username }} says: <b>{{post.body}}</b></p></div>
+<!-- b标签指对字体加粗 -->
+{% endfor %}
+<!-- 结束上面开启的循环 -->
+
+{% endblock %}
