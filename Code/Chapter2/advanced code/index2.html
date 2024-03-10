@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    {% if title %}
+    <!-- 若有标题的话执行下面的语句 -->
+    <title>{{title}}-Mircroblog</title>
+    
+    <!-- 否则执行下面语句 -->
+    {% else %}
+    <title>Welcome to Microblog</title>
+
+    <!-- 代表else语句的结束点 -->
+    {% endif %}
+
+</head>
+<body>
+    <h1>Hi, {{user.username}}!</h1>
+    {% for post in posts %}
+    <!-- 开启一个循环，穷举每一个post -->
+    <div><p>{{post.author.username }} says: <b>{{post.body}}</b></p></div>
+    <!-- b标签指对字体加粗 -->
+    {% endfor %}
+    <!-- 结束上面开启的循环 -->
+</body>
+</html>
