@@ -38,7 +38,7 @@ So run the following code:
 ```shell
 mkdir app
 ```
-Then in app, you need to edit the __init__.py file as [this](Code/Chapter1/microblog/app/__init__.py)
+Then in app, you need to edit the __init__.py file as [this](https://github.com/Fanlinfeng23/Build-a-Microblog-with-Flask/blob/main/Code/Chapter1/microblog/app/__init__.py)
 
 As you could see, the last line in the code is:
 ```python
@@ -62,4 +62,4 @@ export FLASK_APP=microblog.py
 > if you are using Microsoft Windows, you need to replace export by set
 
 ## The sturcture of the app
-[app](Code/Chapter1/microblog)
+[app](https://github.com/Fanlinfeng23/Build-a-Microblog-with-Flask/tree/main/Code/Chapter1/microblog)
