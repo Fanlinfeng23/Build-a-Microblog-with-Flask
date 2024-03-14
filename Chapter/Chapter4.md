@@ -39,6 +39,25 @@ u.check_password('susanpassword')
 ```
 
 
-## 2.Introduction to Flask Login
+## 2.Introduction to Flask Login 
+In this chapter, i will going to introduce you a very popular extension called Flask-Login.
 
+By using this extension, the users can login and then navigate to different pages while the application 'remembers'
+ the user is logged in. 
 
+To be ready for this chapter, you can start by installing Flask-Login in your virtual environment.
+```shell
+pip install flask-login
+```
+
+As with this extension, Flask-Login needs to be created and initialized right after the application instance in app/__init__.py. 
+```python
+#...
+from flask_login import LoginManager
+
+app=Flask(__name__)
+#...
+login=LoginManager(app)
+
+#...
+``` 
