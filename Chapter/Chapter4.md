@@ -60,4 +60,38 @@ app=Flask(__name__)
 login=LoginManager(app)
 
 #...
-``` 
+
+```
+## 3.Preparing The User Model for Flask-Login
+There are four required items listed below.
+
+1.is_authentiated: True: have valid credentials
+
+2.is_active:       True: account is active
+
+3.is_anonymous:    True: for special, annoymous user
+
+4.get_id:        returns a unique identifier for the users as a string
+
+
+To implement these, Flask provides a mixin class called UserMixin that includes safe implementations.
+
+Here is how the ***mixin class*** is added to the model.
+```python
+#...
+from flask_login import UserMixin
+
+class Use(UserMixin, db.Model)
+#...
+
+```
+## 4.User Loader Function
+Cause it knows nothing about databases, it needs the application's help in loading a user. For that reason the extension expects that the app will configure a user loader function, that can be called to load a user given the ID. This function can be added in the app/models.py module:
+```python
+from app import login
+#...
+@login.user_loader
+def loader_user(id):
+    return db.session.get(User, int(id))
+```
+
